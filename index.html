@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru" class="x-os x-dest x-handle">
+<head>
+<meta charset="utf-8">
+<script>
+(function (h, ua) {
+  if (/android/i.test(ua)) h.classList.add('os-android');
+  else if (/iphone|ipad|ipod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) h.classList.add('os-ios');
+})(document.documentElement, navigator.userAgent);
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Наши проекты</title>
+<meta name="description" content="Приложения и боты в Telegram для изучения ислама.">
+<meta property="og:title" content="Наши проекты">
+<meta property="og:description" content="Приложения и боты в Telegram для изучения ислама.">
+<meta property="og:url" content="https://abumaliksoft-projects.github.io/">
+<meta name="theme-color" content="#FAFAFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171717" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&icon_names=auto_stories,campaign,chevron_right,expand_more,local_library,menu_book,open_in_new,phone_iphone,send,share,shop,wb_twilight&display=block">
+<style>
+/* Токены приложения Pro Islam: Roboto, акцент #F39C12, рамки серо-голубые, без заливок карточек */
+:root{--bg:#FAFAFF;--fg:#171717;--mut:#5E5E66;--line:rgba(120,144,156,.6);--band:#EDEDF2;--acc:#F39C12;--acct:#8F5300;--onacc:#1D1300;--ico-mix:18%;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#171717;--fg:#FAFAFF;--mut:#A9A9B3;--line:rgba(120,144,156,.55);--band:#24242A;--acct:#F7B54A;--ico-mix:38%;--ico-fg:#fff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171717;--fg:#FAFAFF;--mut:#A9A9B3;--line:rgba(120,144,156,.55);--band:#24242A;--acct:#F7B54A;--ico-mix:38%;--ico-fg:#fff;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.ms{font-family:'Material Symbols Outlined';font-weight:400;font-style:normal;font-size:20px;line-height:1;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'opsz' 24;user-select:none;flex:none;width:1em;overflow:hidden}
+.wrap{max-width:var(--maxw,960px);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:calc(20px + env(safe-area-inset-top,0px)) calc(28px + env(safe-area-inset-bottom,0px))}
+.top .who{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:0}
+h1{font-size:28px;line-height:1.15;font-weight:700;margin:4px 0 6px;text-wrap:balance}
+.lead{color:var(--mut);margin:0;max-width:60ch}
+h2,h3,p{margin:0}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.foot{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.share{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:22px;border:1px solid var(--line);background:transparent;color:var(--fg);font:500 14px Roboto,system-ui,sans-serif;cursor:pointer}
+.share .ms{color:var(--acct)}
+.foot small{color:var(--mut);font-size:12px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+:root{--maxw:640px}
+.sec{margin-top:20px}
+.sec>h2{font-size:13px;font-weight:500;color:var(--mut);margin:0 0 6px 4px}
+.grp{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.grp>*+*{border-top:1px solid var(--line)}
+.row{display:flex;align-items:center;gap:14px;min-height:60px;padding:10px 12px 10px 14px;text-decoration:none;color:var(--fg);cursor:pointer;list-style:none}
+.row::-webkit-details-marker{display:none}
+.ico{flex:none;display:flex;align-items:center;justify-content:center;color:var(--bc)}
+.ico .ms{font-size:24px}
+.tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.tx b{font-weight:500;font-size:15px}
+.tx span{font-size:13px;color:var(--mut)}
+.tx .hd{display:none;font-size:12px}
+.row>.end{color:var(--mut);font-size:20px;transition:transform .15s}
+.row>.dst{display:none;color:var(--acct)}
+details[open]>.row>.end{transform:rotate(180deg)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 12px 52px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border-radius:18px;border:1px solid var(--line);text-decoration:none;font-size:13px;font-weight:500;color:var(--fg)}
+.chip .ms{font-size:17px;color:var(--acct)}
+.os-main,.os-also{display:none}
+.tx .store{font-size:13px;font-weight:500;color:var(--acct);margin-top:2px}
+.os-also{margin:-4px 0 0;padding:0 12px 12px 52px;font-size:13px;color:var(--mut)}
+.os-also a{color:var(--acct);font-weight:500;text-decoration:none;display:inline-block;padding:6px 0}
+/* У-1 значок в кружке, как у карточек книг (К1) */
+.x-circle .ico{width:40px;height:40px;border-radius:50%;background:color-mix(in srgb,var(--bc) var(--ico-mix),var(--bg));color:var(--ico-fg,var(--bc))}
+.x-circle .ico .ms{font-size:22px}
+.x-circle .chips,.x-circle .os-also{padding-left:68px}
+/* У-2 магазин своего телефона в одно нажатие */
+.x-os.os-android .app>details,.x-os.os-ios .app>details{display:none}
+.x-os.os-android .os-main.and,.x-os.os-ios .os-main.ios{display:flex}
+.x-os.os-android .os-also.and,.x-os.os-ios .os-also.ios{display:block}
+/* У-3 значок, куда ведёт строка */
+.x-dest .row>.ch{display:none}
+.x-dest .row>.dst{display:inline-block}
+/* У-4 @имя бота */
+.x-handle .tx .hd{display:block}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top"><p class="who">Abu Malik</p><h1>Наши проекты</h1><p class="lead">Приложения и боты в Telegram для изучения ислама.</p></header>
+<section class="sec" aria-labelledby="s-apps"><h2 id="s-apps">Приложения</h2><div class="grp"><div class="app" style="--bc:#F39C12"><details><summary class="row"><span class="ico"><i class="ms" aria-hidden="true">menu_book</i></span><span class="tx"><b>Pro Islam</b><span>Книги, лекции и курсы об исламе: читать, слушать и скачивать, чтобы заниматься без интернета.</span></span><i class="ms end" aria-hidden="true">expand_more</i></summary><div class="chips"><a class="chip" href="https://play.google.com/store/apps/details?id=com.abumaliksoft.proislam"><i class="ms" aria-hidden="true">shop</i><span>Google Play</span></a><a class="chip" href="https://apps.apple.com/app/id6475174153"><i class="ms" aria-hidden="true">phone_iphone</i><span>App Store</span></a><a class="chip" href="https://t.me/proislam_bot/app"><i class="ms" aria-hidden="true">send</i><span>В Telegram</span></a></div></details><a class="row os-main and" href="https://play.google.com/store/apps/details?id=com.abumaliksoft.proislam"><span class="ico"><i class="ms" aria-hidden="true">menu_book</i></span><span class="tx"><b>Pro Islam</b><span>Книги, лекции и курсы об исламе: читать, слушать и скачивать, чтобы заниматься без интернета.</span><span class="store">Установить из Google Play</span></span><i class="ms end" aria-hidden="true">chevron_right</i></a><p class="os-also and">Также: <a href="https://apps.apple.com/app/id6475174153">App Store</a> · <a href="https://t.me/proislam_bot/app">В Telegram</a></p><a class="row os-main ios" href="https://apps.apple.com/app/id6475174153"><span class="ico"><i class="ms" aria-hidden="true">menu_book</i></span><span class="tx"><b>Pro Islam</b><span>Книги, лекции и курсы об исламе: читать, слушать и скачивать, чтобы заниматься без интернета.</span><span class="store">Установить из App Store</span></span><i class="ms end" aria-hidden="true">chevron_right</i></a><p class="os-also ios">Также: <a href="https://play.google.com/store/apps/details?id=com.abumaliksoft.proislam">Google Play</a> · <a href="https://t.me/proislam_bot/app">В Telegram</a></p></div><div class="app" style="--bc:#D9652B"><details><summary class="row"><span class="ico"><i class="ms" aria-hidden="true">local_library</i></span><span class="tx"><b>Bayt al-Magrifa</b><span>Библиотека книг и аудиоуроков: читать и слушать в одном приложении.</span></span><i class="ms end" aria-hidden="true">expand_more</i></summary><div class="chips"><a class="chip" href="https://play.google.com/store/apps/details?id=com.baytalmagrifa.app"><i class="ms" aria-hidden="true">shop</i><span>Google Play</span></a><a class="chip" href="https://apps.apple.com/app/id6466660815"><i class="ms" aria-hidden="true">phone_iphone</i><span>App Store</span></a><a class="chip" href="https://t.me/bmagrifabooks_bot/app"><i class="ms" aria-hidden="true">send</i><span>В Telegram</span></a></div></details><a class="row os-main and" href="https://play.google.com/store/apps/details?id=com.baytalmagrifa.app"><span class="ico"><i class="ms" aria-hidden="true">local_library</i></span><span class="tx"><b>Bayt al-Magrifa</b><span>Библиотека книг и аудиоуроков: читать и слушать в одном приложении.</span><span class="store">Установить из Google Play</span></span><i class="ms end" aria-hidden="true">chevron_right</i></a><p class="os-also and">Также: <a href="https://apps.apple.com/app/id6466660815">App Store</a> · <a href="https://t.me/bmagrifabooks_bot/app">В Telegram</a></p><a class="row os-main ios" href="https://apps.apple.com/app/id6466660815"><span class="ico"><i class="ms" aria-hidden="true">local_library</i></span><span class="tx"><b>Bayt al-Magrifa</b><span>Библиотека книг и аудиоуроков: читать и слушать в одном приложении.</span><span class="store">Установить из App Store</span></span><i class="ms end" aria-hidden="true">chevron_right</i></a><p class="os-also ios">Также: <a href="https://play.google.com/store/apps/details?id=com.baytalmagrifa.app">Google Play</a> · <a href="https://t.me/bmagrifabooks_bot/app">В Telegram</a></p></div></div></section>
+<section class="sec" aria-labelledby="s-bots"><h2 id="s-bots">Боты в Telegram</h2><div class="grp"><a class="row" style="--bc:#2E8B57" href="https://t.me/pro_iman_bot"><span class="ico"><i class="ms" aria-hidden="true">wb_twilight</i></span><span class="tx"><b>Pro Iman</b><span class="hd">@pro_iman_bot</span><span>Аят и хадис о вере каждый день в удобное время или по кнопке.</span></span><i class="ms end ch" aria-hidden="true">chevron_right</i><i class="ms end dst" aria-hidden="true">send</i></a><a class="row" style="--bc:#3F6FB5" href="https://t.me/tafsir_page_bot"><span class="ico"><i class="ms" aria-hidden="true">auto_stories</i></span><span class="tx"><b>Коран с тафсиром</b><span class="hd">@tafsir_page_bot</span><span>Страницы Корана с толкованием: присылает нужную страницу по запросу.</span></span><i class="ms end ch" aria-hidden="true">chevron_right</i><i class="ms end dst" aria-hidden="true">send</i></a></div></section>
+<section class="sec" aria-labelledby="s-news"><h2 id="s-news">Новости проектов</h2><div class="grp"><a class="row" style="--bc:#2A9FD8" href="https://t.me/AbuMalikSoftChannel"><span class="ico"><i class="ms" aria-hidden="true">campaign</i></span><span class="tx"><b>Канал в Telegram</b><span>Новые книги, обновления приложений и ботов.</span></span><i class="ms end ch" aria-hidden="true">chevron_right</i><i class="ms end dst" aria-hidden="true">send</i></a></div></section>
+<footer class="foot">
+<button class="share" id="share" type="button"><i class="ms" aria-hidden="true">share</i><span>Поделиться страницей</span></button>
+<small>abumaliksoft-projects.github.io</small>
+</footer>
+</main>
+<script>
+(function () {
+  var b = document.getElementById('share'), t = b.querySelector('span'), url = 'https://abumaliksoft-projects.github.io/';
+  b.addEventListener('click', function () {
+    var done = function (s) { t.textContent = s; setTimeout(function () { t.textContent = 'Поделиться страницей'; }, 2000); };
+    if (navigator.share) { navigator.share({ title: 'Наши проекты', url: url }).catch(function () {}); return; }
+    if (navigator.clipboard) { navigator.clipboard.writeText(url).then(function () { done('Ссылка скопирована'); }, function () { done(url); }); }
+    else done(url);
+  });
+})();
+</script>
+</body>
+</html>
